@@ -4,12 +4,14 @@ Mini Flask API main file
 import json
 from flask import Flask, Response
 
+
 def create_app():
     """
     Factory function for Flask application
     :return: app object
     """
     app = Flask(__name__)
+
 
     @app.get('/api/v1.0/first')
     def first_get():

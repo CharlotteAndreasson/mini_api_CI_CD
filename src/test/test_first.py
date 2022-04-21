@@ -2,6 +2,7 @@
 Unit tests for first end-point
 """
 
+
 import json
 import pytest
 from ..app import create_app
@@ -20,6 +21,7 @@ def client():
     with app.app_context():
         with app.test_client() as api_client:
             yield api_client
+
 
 def test_first_status_code(client):
     """
