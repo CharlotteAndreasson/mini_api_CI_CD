@@ -12,12 +12,20 @@ def create_app():
     """
     app = Flask(__name__)
 
-
     @app.get('/api/v1.0/first')
     def first_get():
         data = {
             'name': 'Jane',
             'age': 34
+        }
+
+        return Response(json.dumps(data), 200, content_type='application/json')
+
+    @app.get('/api/v1.0/second')
+    def second_get():
+        data = {
+            'name': 'Sverker',
+            'age': 15
         }
 
         return Response(json.dumps(data), 200, content_type='application/json')
